@@ -1,0 +1,17 @@
+---
+kind: pipeline
+type: ssh
+name: default
+
+server:
+  host: 18.183.119.254
+  user: root
+  password:
+    from_secret: virtualcom
+
+steps:
+- name: greeting
+  commands:
+  - echo hello world
+
+...
